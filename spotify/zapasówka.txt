@@ -1,0 +1,97 @@
+<div class="size hover">
+                        <img src="content/home-full.svg"/>
+                        <span>Home</span>
+                    </div>
+                    <div class="size hover">
+                        <img src="content/search-empty.svg"/>
+                        <span>Szukaj</span>
+                    </div>
+                    <a href="">
+                    <div class="size hover">
+                        <img src="content/library-empty.svg"/>
+                        <span>Biblioteka</span>
+                    </div>
+                    </a>
+
+
+
+
+.size{
+    width: 250px;
+    height: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+.size > img{
+    position: relative;
+    top: 5px;
+}
+
+.size > span{
+    display: inline-block;
+    position: relative;
+    left: 5px;
+    cursor:pointer;
+}
+
+div.hover{
+    transition-duration: 0.7s;
+}
+div.hover:hover{
+    color: white;
+    transition-duration: 0.7s;
+}
+
+
+
+
+--------------------------------------------------
+
+<img class="icon home" src="content/home-full.svg"/>
+                    <img class="icon search" src="content/search-empty.svg"/>
+                    <img class="icon library" src="content/library-empty.svg"/>
+                    <ul class="menu-list">
+                        <li>Home</li>
+                        <li>Szukaj</li>
+                        <li>Biblioteka</li>
+                    </ul>
+
+
+
+ul.menu-list{
+    font-family: Gothic-Medium;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+
+}
+ul.menu-list > li{
+    width: 180px;
+    position: relative;
+    margin-top: 9px;
+    margin-bottom: 23px;
+    padding-left: 70px;
+    top: 10px;
+    transition-duration: 0.7s;
+}
+ul.menu-list > li:hover{
+    color: white;
+    transition-duration: 0.7s;
+}
+
+.icon{
+    position: absolute;
+    left: 30px;
+}
+
+.home{
+    top: 94px;
+}
+.search{
+    top: 140px;
+}
+.library{
+    top: 185px;
+}
+

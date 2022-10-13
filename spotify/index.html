@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"/>
+        <title>Spotify</title>
+        <meta name="keywords" content="Spotify, muzyka, muzyka online"/>
+        <link rel="icon" type="image/x-icon" href="content/Spotify_logo_without_text.svg"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div id="container">
+            <header id="header" class="">
+                <div id="header-div">
+                    <a href="">
+                        <div class="btn one">
+                            <img src="content/arrow-left.svg">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="btn two">
+                            <img src="content/arrow-right.svg">
+                        </div>
+                    </a>
+                    <div id="settings" style="float: right;">
+                        <button onclick="menuClick()" class="settings-btn">
+                            <div id="drake"><img id="drake" class="drake" src="content/drake-profile.jpg"/></div>
+                            <div class="text">Drake</div>
+                            <img class="arrow" src="content/arrow-settings.svg"/>
+                        </button>
+                        <div id="my-dropmenu" class="dropmenu" style="right: 0;">
+                            <ul type="none">
+                                <a href=""><li style="margin-top: 6px;">Account</li></a>
+                                <a href=""><li>Set up your Family Plan</li></a>
+                                <a href=""><li>Profile</li></a>
+                                <a href=""><li>Support</li></a>
+                                <a href=""><li>Download</li></a>
+                                <a href=""><li>Settings</li></a>
+                                <div id="line1"></div>
+                                <a href=""><li style="margin-bottom: 6px;">Log out</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <nav>
+                <div id="nav">
+                    <a href="">
+                        <img src="content/Spotify_Logo_CMYK_White.png"/>
+                    </a>
+                    <div id="top-menu">
+                        <ul class="menu-list">
+                            <a href=""><li style="margin-top: 8px;">
+                                <img id="home" class="icon1 home" src="content/home-full.svg"/>
+                                Home</li></a>
+                            <a href=""><li>
+                                <img id="search" class="icon1 search" src="content/search-empty.svg"/>
+                                Search</li></a>
+                            <a href=""><li>
+                                <img id="library" class="icon1 library" src="content/library-empty.svg"/>
+                                Your Library</li></a>
+                        </ul>
+                        <ul class="menu-list">
+                            <a href=""><li style="margin-top: 30px;">
+                                <div><img class="add-playlist" src="content/plus.svg"/></div>
+                                Create Playlist</li></a>
+                            <a href=""><li>
+                                <img class="icon2 liked-songs" src="content/liked-songs.png"/>
+                                Liked songs</li></a>
+                        </ul>
+                        <div id="line2"></div>
+                    </div>
+                    <div id="playlists">
+                        <a href="" style="margin-top: 10px; padding-top: 9px;">Taco Hemingway Mix</a>
+                        <a href="">JazzClub</a>
+                        <a href="">Juice WRLD Mix</a>
+                        <a href="">Kid Cudi Radio</a>
+                        <a href="">Filip + KamilKWK</a>
+                        <a href="">Ballin'</a>
+                        <a href="">NBA 2K22 Soundtrack</a>
+                        <a href="">RapCaviar</a>
+                        <a href="">Polska TOP50 Viral</a>
+                        <a href="">00' Hits</a>
+                        <a href="">Soma 0,5mg</a>
+                    </div>
+                    <div id="install">
+                        <a href=""><img src="content/install.svg"/>Install App</a>
+                    </div>
+                    <div id="player">
+                        <img src="content/europa.jpg"/>
+                        <span class="title">Luxembourg</span>
+                        <span class="artist">Taco Hemingway</span>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="content">
+                <div id="przywitanie">Good afternoon</div>
+            </div>
+
+
+            <footer>
+
+            </footer>
+        </div>
+        <script src="script.js"></script>
+        <!-- <script src="example.js"></script> -->
+    </body>
+</html>
