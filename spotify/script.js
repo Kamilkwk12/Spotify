@@ -1,5 +1,6 @@
 // kod odpowiedzialny za wyświetlanie menu ustawień po 
-// kliknięniu w przycisk w lewym górnym rogu strony
+// kliknięniu w przycisk w lewym górnym rogu strony i
+// zamykanie go przy kliknięciu gdziekolwiek indziej
 var arrowDown = document.getElementById("arrow-down");
 var myDropmenu = document.getElementById("my-dropmenu");
 var arrowUp = document.getElementById("arrow-up")
