@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+/* fonty */
 @font-face {
     font-family: Gotham-Medium;
     src: url(content/GothamMedium.ttf);
@@ -24,12 +25,13 @@ body{
 }
 
 #container{
-    width: 1920px;
-    height: 1700px;
+    width: 100%;
+    height: 100%;
 }
 
-/*nagłówek contentu, guziki, 
-przywitanie i ustawienia*/
+/*nagłówek contentu, przyciski 
+cofania i ponawiania oraz 
+rozwijane ustawienia (JS) */
 header{
     float: left;
     margin-left: 250px;
@@ -37,7 +39,7 @@ header{
 
 #header-div{
     position: fixed;
-    width: 1920px;
+    width: 100%;
     height: 80px;
     top: 0;
     z-index: 1;
@@ -112,12 +114,29 @@ header{
     z-index: 1;
 }
 
-.settings-btn > .arrow{
+.settings-btn > .arrow-down{
     width: 15px;
     height: 15px;
     border-radius: 50px;
     margin-right: 10px;
     margin-bottom: 7px;
+}
+
+.arrow-up{
+    display: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    margin-right: 10px;
+    margin-bottom: 7px;
+}
+
+.hide-arrow{
+    display: none;
+}
+
+.show-arrow{
+    display: inline;
 }
 
 
@@ -197,7 +216,7 @@ nav{
     background-color: black;
     height: 100%;
     width: 250px;
-    overflow-x: 0;
+    overflow-y: hidden;
 }
 
 #nav{
@@ -353,17 +372,231 @@ ul.menu-list > a{
     padding-top: 7px;
 }
 
+/* player u dołu strony */
+#player {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #121212;
+    z-index: 2;
+    border-top: solid rgba(255, 255, 255, 0.3) 0.2px;
+    color: white;
+}
+.album-player {
+    display: block;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0px 0px 10px black;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#player > .titlecontainer{
+    width: 130px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#player > div >span{
+    display: block;
+    height: 20px;
+    width: 100%;
+    margin-left: 15px;
+}
+
+.title{
+    font-family: Gotham-Medium;
+    font-size: 14px;
+
+}
+.artist{
+    font-family: Gotham-Normal;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.heart-player{
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    opacity: 0.7;
+    transition-duration: 0.2s;
+}
+
+.heart-player:hover{
+    opacity: 1;
+    transition-duration: 0.2s;
+}
+
+#timer{
+    position: absolute;
+    color: white;
+    font-size: 13px;
+    font-family: Gotham-Normal;
+    width: 30px !important;
+    height: 18px !important;
+    margin-left: 178px !important;
+    margin-top: 70px !important;
+}
+
+.slidercontainer{
+    display: block;
+    position: relative;
+    width: 35%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.slider{
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    border: none;
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+
+.slider::-moz-range-thumb {
+    visibility: visible;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border: solid rgba(255, 255, 255, 0.4) 0.5px;
+} 
+input[type="range"]::-moz-range-progress {
+    background-color: #1ed760; 
+    height: 4px;
+    border-radius: 5px;
+  }
+  input[type="range"]::-moz-range-track {  
+    background-color: white;
+    height: 4px;
+    border-radius: 5px;
+  }
+
+.playerbtn{
+    width: 18px;
+    height: 18px;
+    margin: auto;
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+
+.playerbtn:hover{
+    transition-duration: 0.5s;
+    opacity: 1;
+}
+
+.playerbtn1{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    margin: 8px;
+}
+
+.playbtn{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    margin: auto;
+    transition-duration: 0.3s;
+}
+
+.playbtn:hover{
+    background-color: #191919;
+    transition-duration: 0.3s;
+}
+
+.slider-buttons{
+    display: flex;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider-buttons a{
+    margin-bottom: 5px;
+    margin: auto;
+}
+
+.player-options{
+    display: flex;
+    width: 250px;
+    height: 100%;
+}
+
+.player-options a {
+    margin: auto;
+}
+
+.playeroptbtn{
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+
+.playeroptbtn:hover{
+    transition-duration: 0.5s;
+    opacity: 1;
+}
+
+.slider-speaker{
+    width: 100px !important;
+    margin: auto;
+}
+
+
+/* content strony - kafelki z albumami */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border: none;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #303030; 
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
 #content {
-    width: 1670px;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 250px);
     height: 1500px;
     margin-left: 250px;
     margin-top: 80px;
+
 }
 
+
+
 #przywitanie{
-    display:block;
-    width: auto;
-    height: auto;
+    display:inline;
+    width: 300px;
+    height: 60px;
     color: white;
     font-family: Gotham-Bold;
     font-size: 30px;
@@ -372,40 +605,103 @@ ul.menu-list > a{
 }
 
 
-#player {
-    position: fixed;
-    bottom: 0;
-    width: 1670px;
-    height: 100px;
-    background-color: #121212;
-    z-index: 2;
-    border-top: solid rgba(255, 255, 255, 0.3) 0.2px;
+#recent{
+    display: flex;
+    clear: both;
+    width: calc(100% - 40px) ;
+    height: 215px;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    /* background-color: white; */
+}
+
+.recent-element{
+    display: flex;
+    width: 30.7%;
+    height: 80px;
+    margin: 0 15px 0 15px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #121212;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.recent-element:hover{
+    background-color: #333;
+    transition-duration: 0.5s;
+}
+
+.content-cover{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px 0 0px 10px;
+    box-shadow: 5px 0px 10px #121212;
+}
+
+.recent-element span{
+    margin: auto;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: Gotham-Medium;
     color: white;
 }
-#player > img {
-    display: block;
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    box-shadow: 0px 0px 10px black;
-    top: 21px;
-    left: 25px;
+
+.section-title{
+    display:inline;
+    width: 300px;
+    height: 40px;
+    color: white;
+    font-family: Gotham-Bold;
+    font-size: 25px;
+    margin-left: 32px;
+    margin-top: 15px;
 }
 
-#player > span{
-    display: block;
-    margin-bottom: 5px;
-    margin-left: 100px;
-
+.section{
+    display: flex;
+    width: 100%;
+    height: 270px;
+    /* background-color: white; */
 }
 
-.title{
-    font-family: Gotham-Medium;
+.section-element{
+    display: flex;
+    width: 16.2%;
+    height: 260px;
+    background-color: #222;
+    border-radius: 10px;
+    margin:auto 10px auto 30px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.section-element:hover{
+    background-color: #333;
+    transition-duration: 0.5s;
+}
+
+.artist-profile{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin: 15px auto 15px auto;
+    box-shadow: 5px 0px 30px #121212;;
+}
+.span1{
+    display: block;
+    font-family: Gotham-medium;
+    color: white;
+    font-size: 18px;
+    margin: 0 auto 5px 13px;
+}
+
+.span2{
+    display: block;
+    font-family: Gotham-normal;
+    color: gray;
     font-size: 14px;
-    margin-top: 33px;
-}
-.artist{
-    font-family: Gotham-Normal;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.5);
+    margin: 0 auto auto 13px;
 }

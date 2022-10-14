@@ -23,10 +23,11 @@
                         </div>
                     </a>
                     <div id="settings" style="float: right;">
-                        <button onclick="menuClick()" class="settings-btn">
+                        <button id="button"onclick="menuClick()" class="settings-btn">
                             <div id="drake"><img id="drake" class="drake" src="content/drake-profile.jpg"/></div>
                             <div class="text">Drake</div>
-                            <img class="arrow" src="content/arrow-settings.svg"/>
+                            <img id="arrow-down" class="arrow-down" src="content/arrow-settings.svg"/>
+                            <img id="arrow-up" class="arrow-up" src="content/arrow-settings-up.svg"/>
                         </button>
                         <div id="my-dropmenu" class="dropmenu" style="right: 0;">
                             <ul type="none">
@@ -88,18 +89,120 @@
                         <a href=""><img src="content/install.svg"/>Install App</a>
                     </div>
                     <div id="player">
-                        <img src="content/europa.jpg"/>
-                        <span class="title">Luxembourg</span>
+                        <img class="album-player" src="content/europa.jpg"/>
+                        <div class="titlecontainer">
+                        <span class="title">Europa</span>
                         <span class="artist">Taco Hemingway</span>
+                        </div>
+                        <img class="heart-player" src="content/heart-empty.svg"/>
+                        <div class="timer">
+                            <span id="timer"></span>
+                        </div>
+                        <div class="slidercontainer">
+                            <div class="slider-buttons">
+                                <a href=""><img class="playerbtn" src="content/shuffle.svg"/></a>
+                                <a href=""><img class="playerbtn" src="content/back.svg"/></a>
+                                <a href=""><div class="playbtn"><img class="playerbtn1" src="content/play.svg"/></div></a>
+                                <a href=""><img class="playerbtn" src="content/foward.svg"/></a>
+                                <a href=""><img class="playerbtn" src="content/loop.svg"/></a>
+                            </div>
+                            <input id="play-slider" type="range" min="0" max="180" value="37" class="slider"/>
+                        </div>
+                        <div class="player-options">
+                            <a href=""><img class="playeroptbtn" src="content/queue.svg"/></a>
+                            <a href=""><img class="playeroptbtn" src="content/device.svg"/></a>
+                            <a href=""><img class="playeroptbtn" src="content/speaker.svg"/></a>
+                            <input type="range" min="1" max="100" value="36" class="slider slider-speaker"/>
+                            <a href=""><img class="playeroptbtn" src="content/fullscreen.svg"/></a>
+                        </div>
                     </div>
                 </div>
             </nav>
-
             <div id="content">
                 <div id="przywitanie">Good afternoon</div>
+                <div id="recent">
+                    <div class="recent-element">
+                        <img class="content-cover" src="content/liked-songs.png"/>
+                        <span>Liked songs</span>
+                    </div>
+                    <div class="recent-element">
+                        <img class="content-cover" src="content/europa.jpg"/>
+                        <span>Europa</span>
+                    </div>
+                    <div class="recent-element">
+                        <img class="content-cover" src="content/rapcaviar.jpg"/>
+                        <span>RapCaviar</span>
+                    </div>
+                    <div class="recent-element">
+                        <img class="content-cover" src="content/dailymix2.jpg"/>
+                        <span>Daily Mix 2</span>
+                    </div>
+                    <div class="recent-element">
+                        <img class="content-cover" src="content/viralrap.jpg"/>
+                        <span>Viral Rap</span>
+                    </div>
+                    <div class="recent-element">
+                        <img class="content-cover" src="content/hothitspolska.jpg"/>
+                        <span>Hot Hits Polska</span>
+                    </div>
+                </div>
+                <div class="section-title">Popular artists</div>
+                <div class="section">
+                    <div class="section-element">
+                        <img class="artist-profile" src="content/taco.jpg"/>
+                        <span class="span1">Taco Hemingway</span>
+                        <span class="span2">Artist</span>
+                    </div>
+                    <div class="section-element">
+                        <img class="artist-profile" src="content/asap.jpg"/>
+                        <span class="span1">A$AP Rocky</span>
+                        <span class="span2">Artist</span>
+                    </div>
+                    <div class="section-element">
+                        <img class="artist-profile" src="content/shafter.jpg"/>
+                        <span class="span1">Shafter</span>
+                        <span class="span2">Artist</span>
+                    </div>
+                    <div class="section-element">
+                        <img class="artist-profile" src="content/lamar.jpg"/>
+                        <span class="span1">Kendrick Lamar</span>
+                        <span class="span2">Artist</span>
+                    </div>
+                    <div class="section-element">
+                        <img class="artist-profile" src="content/future.jpg"/>
+                        <span class="span1">Future</span>
+                        <span class="span2">Artist</span>
+                    </div>
+                </div>
+                <div class="section-title">Popular artists</div>
+                <div class="section">
+                    <div class="section-element">
+                        <img class="artist-profile" src="content/taco.jpg"/>
+                        <span class="span1">Taco Hemingway</span>
+                        <span class="span2">Artist</span>
+                    </div>
+                    <div class="section-element">
+                        <img class="artist-profile" src="content/asap.jpg"/>
+                        <span class="span1">A$AP Rocky</span>
+                        <span class="span2">Artist</span>
+                    </div>
+                    <div class="section-element">
+                        <img class="artist-profile" src="content/shafter.jpg"/>
+                        <span class="span1">Shafter</span>
+                        <span class="span2">Artist</span>
+                    </div>
+                    <div class="section-element">
+                        <img class="artist-profile" src="content/lamar.jpg"/>
+                        <span class="span1">Kendrick Lamar</span>
+                        <span class="span2">Artist</span>
+                    </div>
+                    <div class="section-element">
+                        <img class="artist-profile" src="content/future.jpg"/>
+                        <span class="span1">Future</span>
+                        <span class="span2">Artist</span>
+                    </div>
+                </div>
             </div>
-
-
             <footer>
 
             </footer>
