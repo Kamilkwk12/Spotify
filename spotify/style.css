@@ -43,12 +43,12 @@ header{
     height: 80px;
     top: 0;
     z-index: 1;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 .header-background{
     background-color: #1d0e46;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 
@@ -255,7 +255,6 @@ ul.menu-list > a:hover{
 }
 
 div#top-menu > ul > a > li > img{
-    vertical-align: middle;
     opacity: 0.8;
     z-index: 1;
     transition-duration: 0.5s;
@@ -304,12 +303,12 @@ ul.menu-list > a{
     opacity: 0.7;
 }
 
-#top-menu > #line2{
+#line2{
     display: block;
     position: relative;
     width: 200px;
     height: 0.5px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
     left: 25px;
     top: 20px;
     box-shadow: 0px 0px 15px 15px black;
@@ -495,14 +494,22 @@ input[type="range"]::-moz-range-progress {
     opacity: 1;
 }
 
-.playerbtn1{
+#playerbtn1{
     width: 18px;
     height: 18px;
     position: relative;
     margin: 8px;
 }
 
-.playbtn{
+.play{
+    content: url(content/play.svg);
+}
+
+.pause{
+    content: url(content/pause.svg);
+}
+
+#playbtn{
     width: 35px;
     height: 35px;
     background-color: white;
@@ -511,7 +518,7 @@ input[type="range"]::-moz-range-progress {
     transition-duration: 0.3s;
 }
 
-.playbtn:hover{
+#playbtn:hover{
     background-color: #191919;
     transition-duration: 0.3s;
 }
@@ -585,7 +592,7 @@ input[type="range"]::-moz-range-progress {
     display: flex;
     flex-direction: column;
     width: calc(100% - 250px);
-    height: 1500px;
+    height: 1375px;
     margin-left: 250px;
     margin-top: 80px;
 
@@ -663,16 +670,24 @@ input[type="range"]::-moz-range-progress {
     display: flex;
     width: 100%;
     height: 270px;
+    margin-bottom: 30px;
     /* background-color: white; */
 }
-
+ .section > a{
+    display: flex;
+    width: 16.5%;
+    height: 260px;
+    margin:auto 4px auto 30px;
+    text-decoration: none;
+ }
 .section-element{
     display: flex;
-    width: 16.2%;
-    height: 260px;
-    background-color: #222;
+    width: 196px;
+    height: 280px;
+    background-color: #191919;
+    box-shadow:5px 0px 50px #121212;
     border-radius: 10px;
-    margin:auto 10px auto 30px;
+    /* margin:auto 10px auto 30px; */
     transition-duration: 0.5s;
     cursor: pointer;
     flex-direction: column;
@@ -690,6 +705,14 @@ input[type="range"]::-moz-range-progress {
     margin: 15px auto 15px auto;
     box-shadow: 5px 0px 30px #121212;;
 }
+
+.album-cover{
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    margin: 15px auto 15px auto;
+    box-shadow: 5px 0px 30px #121212;;
+}
 .span1{
     display: block;
     font-family: Gotham-medium;
@@ -704,4 +727,112 @@ input[type="range"]::-moz-range-progress {
     color: gray;
     font-size: 14px;
     margin: 0 auto auto 13px;
+}
+
+footer{
+    display: flex;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    height: 480px;
+    /* background-color: black; */
+}
+
+.footer-list{
+    width: 150px;
+    color: white;
+    font-family: Gotham-Normal;
+    font-size: 14px;
+    margin: 60px 30px 0 30px;
+}
+
+.footer-list a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    transition-duration: 0.5s;
+}
+
+.footer-list a:hover{
+    color: white;
+    transition-duration: 0.5s;
+}
+.footer-list span{
+    display: block;
+    font-family: Gotham-Medium !important;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-list li {
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+
+.social-container{
+    display: flex;
+    width: 160px;
+    height: 40px;
+    margin: 60px 30px 0 auto;
+}
+
+.social-media-div{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #282828;
+    border-radius: 50%;
+    margin-right: 18px;
+    transition-duration: 0.5s;
+}
+
+.social-media-div:hover{
+    background-color: #555;
+    transition-duration: 0.5s;
+}
+
+.social-media-logo{
+    margin: auto;
+    width: 18px;
+    height: 18px;
+}
+
+.footer-line{
+    position:absolute;
+    top: 1700px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 1125px;
+    height: 0.5px;
+    margin: 50px auto 25px 30px;
+}
+
+.end-line{
+    position: absolute;
+    top: 1780px;
+    width: 1125px;
+    height: 16px;
+    color: white;
+    font-family: Gotham-Normal;
+    margin: 0 0 0 30px;
+}
+
+
+.end-line a {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Gotham-Normal;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 0 10px 0 0;
+    transition-duration: 0.5s;
+}
+
+.end-line a:hover{
+    color: white;
+    transition-duration: 0.5s;
+}
+
+.end-line span{
+    position: relative;
+    left: 500px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Gotham-Normal;
+    font-size: 14px;
 }

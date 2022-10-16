@@ -102,11 +102,11 @@
                             <div class="slider-buttons">
                                 <a href=""><img class="playerbtn" src="content/shuffle.svg"/></a>
                                 <a href=""><img class="playerbtn" src="content/back.svg"/></a>
-                                <a href=""><div class="playbtn"><img class="playerbtn1" src="content/play.svg"/></div></a>
+                                <div id="playbtn"><img id="playerbtn1" class="play" src="content/play.svg"/></div>
                                 <a href=""><img class="playerbtn" src="content/foward.svg"/></a>
                                 <a href=""><img class="playerbtn" src="content/loop.svg"/></a>
                             </div>
-                            <input id="play-slider" type="range" min="0" max="180" value="37" class="slider"/>
+                            <input id="play-slider" type="range" min="0" max="180000" value="0" class="slider"/>
                         </div>
                         <div class="player-options">
                             <a href=""><img class="playeroptbtn" src="content/queue.svg"/></a>
@@ -148,66 +148,137 @@
                 </div>
                 <div class="section-title">Popular artists</div>
                 <div class="section">
-                    <div class="section-element">
+                    <a href=""><div class="section-element">
                         <img class="artist-profile" src="content/taco.jpg"/>
                         <span class="span1">Taco Hemingway</span>
                         <span class="span2">Artist</span>
-                    </div>
-                    <div class="section-element">
+                    </div></a>
+                    <a href=""><div class="section-element">
                         <img class="artist-profile" src="content/asap.jpg"/>
                         <span class="span1">A$AP Rocky</span>
                         <span class="span2">Artist</span>
-                    </div>
-                    <div class="section-element">
+                    </div></a>
+                    <a href=""><div class="section-element">
                         <img class="artist-profile" src="content/shafter.jpg"/>
                         <span class="span1">Shafter</span>
                         <span class="span2">Artist</span>
-                    </div>
-                    <div class="section-element">
+                    </div></a>
+                    <a href=""><div class="section-element">
                         <img class="artist-profile" src="content/lamar.jpg"/>
                         <span class="span1">Kendrick Lamar</span>
                         <span class="span2">Artist</span>
-                    </div>
-                    <div class="section-element">
+                    </div></a>
+                    <a href=""><div class="section-element">
                         <img class="artist-profile" src="content/future.jpg"/>
                         <span class="span1">Future</span>
                         <span class="span2">Artist</span>
-                    </div>
+                    </div></a>
                 </div>
-                <div class="section-title">Popular artists</div>
+                <div class="section-title">Popular albums</div>
                 <div class="section">
-                    <div class="section-element">
-                        <img class="artist-profile" src="content/taco.jpg"/>
-                        <span class="span1">Taco Hemingway</span>
-                        <span class="span2">Artist</span>
-                    </div>
-                    <div class="section-element">
-                        <img class="artist-profile" src="content/asap.jpg"/>
-                        <span class="span1">A$AP Rocky</span>
-                        <span class="span2">Artist</span>
-                    </div>
-                    <div class="section-element">
-                        <img class="artist-profile" src="content/shafter.jpg"/>
-                        <span class="span1">Shafter</span>
-                        <span class="span2">Artist</span>
-                    </div>
-                    <div class="section-element">
-                        <img class="artist-profile" src="content/lamar.jpg"/>
-                        <span class="span1">Kendrick Lamar</span>
-                        <span class="span2">Artist</span>
-                    </div>
-                    <div class="section-element">
-                        <img class="artist-profile" src="content/future.jpg"/>
-                        <span class="span1">Future</span>
-                        <span class="span2">Artist</span>
-                    </div>
+                    <a href=""><div class="section-element">
+                        <img class="album-cover" src="content/soma.jpg"/>
+                        <span class="span1">Soma 0.5mg</span>
+                        <span class="span2">Album</span>
+                    </div></a>
+                    <a href=""><div class="section-element">
+                        <img class="album-cover" src="content/europa.jpg"/>
+                        <span class="span1">Europa</span>
+                        <span class="span2">Album</span>
+                    </div></a>
+                    <a href=""><div class="section-element">
+                        <img class="album-cover" src="content/manofthemoon.jpg"/>
+                        <span class="span1">Man Of The Moon III: The Chosen</span>
+                        <span class="span2">Album</span>
+                    </div></a>
+                    <a href=""><div class="section-element">
+                        <img class="album-cover" src="content/umowaodzieło.jpg"/>
+                        <span class="span1">Umowa o Dzieło</span>
+                        <span class="span2">Album</span>
+                    </div></a>
+                    <a href=""><div class="section-element">
+                        <img class="album-cover" src="content/cafebelga.jpg"/>
+                        <span class="span1">Cafe Belga</span>
+                        <span class="span2">Album</span>
+                    </div></a>
+                </div>
+                <div class="section-title">Other playlists</div>
+                <div class="section">
+                    <a href=""><div class="section-element">
+                        <img class="album-cover" src="content/mix1.jpg"/>
+                        <span class="span1">21 Savage Playlist</span>
+                        <span class="span2">Playlist</span>
+                    </div></a>
+                    <a href=""><div class="section-element">
+                        <img class="album-cover" src="content/mix2.jpg"/>
+                        <span class="span1">Drake Playlist</span>
+                        <span class="span2">Playlist</span>
+                    </div></a>
+                    <a href=""><div class="section-element">
+                        <img class="album-cover" src="content/mix3.jpg"/>
+                        <span class="span1">Romantic Mix</span>
+                        <span class="span2">Playlist</span>
+                    </div></a>
+                    <a href=""><div class="section-element">
+                        <img class="album-cover" src="content/mix4.jpg"/>
+                        <span class="span1">Chill Mix</span>
+                        <span class="span2">Playlist</span>
+                    </div></a>
+                    <a href=""><div class="section-element">
+                        <img class="album-cover" src="content/mix5.jpg"/>
+                        <span class="span1">Pop Playlist</span>
+                        <span class="span2">Playlist</span>
+                    </div></a>
                 </div>
             </div>
             <footer>
-
+                <div class="footer-list">
+                    <span>Company</span>
+                    <ul>
+                        <a href=""><li>About</li></a>
+                        <a href=""><li>Jobs</li></a>
+                        <a href=""><li>For the record</li></a>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <span>Communities</span>
+                    <ul>
+                        <a href=""><li>For artists</li></a>
+                        <a href=""><li>Developers</li></a>
+                        <a href=""><li>Advertising</li></a>
+                        <a href=""><li>Investors</li></a>
+                        <a href=""><li>Vendors</li></a>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <span>Useful links</span>
+                    <ul>
+                        <a href=""><li>Support</li></a>
+                        <a href=""><li>Free mobile apps</li></a>
+                    </ul>
+                </div>
+                <div class="social-container">
+                    <a href=""><div class="social-media-div">
+                        <img class="social-media-logo" src="content/instagram.svg"/>
+                    </div></a>
+                    <a href=""><div class="social-media-div">
+                        <img class="social-media-logo" src="content/twitter.svg"/>
+                    </div></a>
+                    <a href=""><div class="social-media-div">
+                        <img class="social-media-logo" src="content/facebook.svg"/>
+                    </div></a>
+                </div>
+                <span class="footer-line"></span>
+                <div class="end-line">
+                    <a href="">Legal</a>
+                    <a href="">Privacy Center</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Cookie Settings</a>
+                    <a href="">About Ads</a>
+                    <span class="spotify-signature">&copy; 2022 Spotify AB</span>
+                </div>
             </footer>
         </div>
         <script src="script.js"></script>
-        <!-- <script src="example.js"></script> -->
     </body>
 </html>
