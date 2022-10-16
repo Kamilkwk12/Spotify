@@ -1,0 +1,838 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* fonty */
+@font-face {
+    font-family: Gotham-Medium;
+    src: url(content/GothamMedium.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Bold;
+    src: url(content/GothamBold.ttf)
+}
+@font-face {
+    font-family: Gotham-Normal;
+    src: url(content/GothamBook.ttf)
+}
+
+body{
+    background-color: #121212;
+    /*overflow-x: hidden;*/
+    background-image: linear-gradient(#1d0e46 2%, #121212 35%);
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+}
+
+/*nagłówek contentu, przyciski 
+cofania i ponawiania oraz 
+rozwijane ustawienia (JS) */
+header{
+    float: left;
+    margin-left: 250px;
+}
+
+#header-div{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    z-index: 1;
+    transition-duration: 0.5s;
+}
+
+.header-background{
+    background-color: #1d0e46;
+    transition-duration: 0.5s;
+}
+
+
+.btn{
+    float: left;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    position: relative;
+    top: 20px;
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+
+.btn:hover{
+    transition-duration: 0.5s;
+    opacity: 1;
+}
+
+.one{
+    left: 30px;
+}
+.two{
+    left: 45px;
+}
+
+.btn > img{
+    position: relative;
+    top: 5px;
+    left: 6px;
+}
+
+
+.settings-btn{
+    position: relative;
+    color: white;
+    font-family: Gotham-Medium;
+    font-size: 15px;
+    background-color: black;
+    border-radius: 50px;
+    border-style: none;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.settings-btn:hover{
+    background-color: #303030;
+    transition-duration: 0.2s;
+}
+
+.settings-btn > #drake{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+.settings-btn > .text{
+    display: inline-block;
+    position: relative;
+    bottom: 9px;
+    z-index: 1;
+}
+
+.settings-btn > .arrow-down{
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    margin-right: 10px;
+    margin-bottom: 7px;
+}
+
+.arrow-up{
+    display: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    margin-right: 10px;
+    margin-bottom: 7px;
+}
+
+.hide-arrow{
+    display: none;
+}
+
+.show-arrow{
+    display: inline;
+}
+
+
+.settings-btn > div > .drake{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 2px;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+#settings{
+    display: block;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    z-index: 1;
+}
+
+.dropmenu{
+    display: none;
+    position: absolute;
+    top: 45px;
+    z-index: 1;
+    background-color: #191919;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.dropmenu > ul > a > li{
+    position: relative;
+    padding: 12px;
+    margin: 3px;
+    width: 85%;
+    color: white;
+    font-family: Gotham-Medium;
+    font-size: 13px;
+    transition-duration: 0.2s;
+}
+.dropmenu > ul > a > li:hover{
+    background-color: #303030;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+}
+
+.dropmenu > ul > a{
+    text-decoration: none;
+}
+
+.show{
+    display: block !important;
+}
+
+#line1{
+    position: relative;
+    width: 185px;
+    height: 0.5px;
+    background-color: rgba(255,255,255,0.1);
+    left: 6.5px
+}
+
+
+/*nawigacja z boku strony*/
+#top-menu{
+    font-family: Gotham-Medium;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+}
+
+
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    height: 100%;
+    width: 250px;
+    overflow-y: hidden;
+}
+
+#nav{
+    position: absolute;
+    margin-top: 0;
+}
+
+#nav > a > img{
+    width: 55%;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+ul.menu-list{
+    font-family: Gotham-Medium;
+    font-size: 15px;
+
+}
+ul.menu-list > a > li{
+    width: 180px;
+    height: 40px;
+    position: relative;
+    padding-left: 65px;
+    top: 18px;
+    transition-duration: 0.5s;
+}
+ul.menu-list > a:hover{
+    color: white;
+    transition-duration: 0.5s;
+}
+
+.icon1{
+    position: absolute;
+    left: 25px;
+    bottom: 18px;
+}
+
+div#top-menu > ul > a > li > img{
+    opacity: 0.8;
+    z-index: 1;
+    transition-duration: 0.5s;
+}
+
+div#top-menu > ul > a > li > img:hover, 
+div#top-menu > ul > a > li > div:hover{
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+
+ul.menu-list > a{
+    display: block;
+    width: 250px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.icon2{
+    position: absolute;
+    left: 25px;
+    border-radius: 5px;
+}
+
+.liked-songs{
+    width: 24px;
+    height: 24px;
+    top: -2px;
+}
+
+.add-playlist{
+    position: relative;
+    left: 6px;
+    top: 3px;
+}
+
+.menu-list > a > li > div{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    left: 25px;
+    bottom: 18px;
+    opacity: 0.7;
+}
+
+#line2{
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 0.5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    left: 25px;
+    top: 20px;
+    box-shadow: 0px 0px 15px 15px black;
+    z-index: 1;
+}
+
+#playlists{
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    height: 320px;
+    overflow-y: auto;
+    overflow: scroll;
+}
+
+
+#playlists > a{
+    display: block;
+    font-family: Gotham-Normal;
+    font-size: 14px;
+    width: 220px;
+    height: 32px;
+    color: rgba(255, 255, 255, 0.5);
+    transition-duration: 0.5s;
+    padding-left: 25px;
+    text-decoration: none;
+    
+}
+
+#playlists > a:hover{
+    transition-duration: 0.5s;
+    color: white;
+}
+
+#install{
+    width: 250px;
+    height: 50px;
+    color: white;
+    font-family: Gotham-Bold;
+    font-size: 14px;
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+#install:hover{
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+#install > a{
+    display: block;
+    width: 250px;
+    height: 50px;
+    text-decoration: none;
+    color: white;
+}
+#install > a > img{
+    position: relative;
+    top: 6.5px;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-top: 7px;
+}
+
+/* player u dołu strony */
+#player {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #121212;
+    z-index: 2;
+    border-top: solid rgba(255, 255, 255, 0.3) 0.2px;
+    color: white;
+}
+.album-player {
+    display: block;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0px 0px 10px black;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#player > .titlecontainer{
+    width: 130px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#player > div >span{
+    display: block;
+    height: 20px;
+    width: 100%;
+    margin-left: 15px;
+}
+
+.title{
+    font-family: Gotham-Medium;
+    font-size: 14px;
+
+}
+.artist{
+    font-family: Gotham-Normal;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.heart-player{
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    opacity: 0.7;
+    transition-duration: 0.2s;
+}
+
+.heart-player:hover{
+    opacity: 1;
+    transition-duration: 0.2s;
+}
+
+#timer{
+    position: absolute;
+    color: white;
+    font-size: 13px;
+    font-family: Gotham-Normal;
+    width: 30px !important;
+    height: 18px !important;
+    margin-left: 178px !important;
+    margin-top: 70px !important;
+}
+
+.slidercontainer{
+    display: block;
+    position: relative;
+    width: 35%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.slider{
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    border: none;
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+
+.slider::-moz-range-thumb {
+    visibility: visible;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border: solid rgba(255, 255, 255, 0.4) 0.5px;
+} 
+input[type="range"]::-moz-range-progress {
+    background-color: #1ed760; 
+    height: 4px;
+    border-radius: 5px;
+  }
+  input[type="range"]::-moz-range-track {  
+    background-color: white;
+    height: 4px;
+    border-radius: 5px;
+  }
+
+.playerbtn{
+    width: 18px;
+    height: 18px;
+    margin: auto;
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+
+.playerbtn:hover{
+    transition-duration: 0.5s;
+    opacity: 1;
+}
+
+#playerbtn1{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    margin: 8px;
+}
+
+.play{
+    content: url(content/play.svg);
+}
+
+.pause{
+    content: url(content/pause.svg);
+}
+
+#playbtn{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    margin: auto;
+    transition-duration: 0.3s;
+}
+
+#playbtn:hover{
+    background-color: #191919;
+    transition-duration: 0.3s;
+}
+
+.slider-buttons{
+    display: flex;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider-buttons a{
+    margin-bottom: 5px;
+    margin: auto;
+}
+
+.player-options{
+    display: flex;
+    width: 250px;
+    height: 100%;
+}
+
+.player-options a {
+    margin: auto;
+}
+
+.playeroptbtn{
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+
+.playeroptbtn:hover{
+    transition-duration: 0.5s;
+    opacity: 1;
+}
+
+.slider-speaker{
+    width: 100px !important;
+    margin: auto;
+}
+
+
+/* content strony - kafelki z albumami */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border: none;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #303030; 
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+#content {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 250px);
+    height: 1375px;
+    margin-left: 250px;
+    margin-top: 80px;
+
+}
+
+
+
+#przywitanie{
+    display:inline;
+    width: 300px;
+    height: 60px;
+    color: white;
+    font-family: Gotham-Bold;
+    font-size: 30px;
+    z-index: -1;
+    margin-left: 32px;
+}
+
+
+#recent{
+    display: flex;
+    clear: both;
+    width: calc(100% - 40px) ;
+    height: 215px;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    /* background-color: white; */
+}
+
+.recent-element{
+    display: flex;
+    width: 30.7%;
+    height: 80px;
+    margin: 0 15px 0 15px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #121212;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.recent-element:hover{
+    background-color: #333;
+    transition-duration: 0.5s;
+}
+
+.content-cover{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px 0 0px 10px;
+    box-shadow: 5px 0px 10px #121212;
+}
+
+.recent-element span{
+    margin: auto;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: Gotham-Medium;
+    color: white;
+}
+
+.section-title{
+    display:inline;
+    width: 300px;
+    height: 40px;
+    color: white;
+    font-family: Gotham-Bold;
+    font-size: 25px;
+    margin-left: 32px;
+    margin-top: 15px;
+}
+
+.section{
+    display: flex;
+    width: 100%;
+    height: 270px;
+    margin-bottom: 30px;
+    /* background-color: white; */
+}
+ .section > a{
+    display: flex;
+    width: 16.5%;
+    height: 260px;
+    margin:auto 4px auto 30px;
+    text-decoration: none;
+ }
+.section-element{
+    display: flex;
+    width: 196px;
+    height: 280px;
+    background-color: #191919;
+    box-shadow:5px 0px 50px #121212;
+    border-radius: 10px;
+    /* margin:auto 10px auto 30px; */
+    transition-duration: 0.5s;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.section-element:hover{
+    background-color: #333;
+    transition-duration: 0.5s;
+}
+
+.artist-profile{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin: 15px auto 15px auto;
+    box-shadow: 5px 0px 30px #121212;;
+}
+
+.album-cover{
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    margin: 15px auto 15px auto;
+    box-shadow: 5px 0px 30px #121212;;
+}
+.span1{
+    display: block;
+    font-family: Gotham-medium;
+    color: white;
+    font-size: 18px;
+    margin: 0 auto 5px 13px;
+}
+
+.span2{
+    display: block;
+    font-family: Gotham-normal;
+    color: gray;
+    font-size: 14px;
+    margin: 0 auto auto 13px;
+}
+
+footer{
+    display: flex;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    height: 480px;
+    /* background-color: black; */
+}
+
+.footer-list{
+    width: 150px;
+    color: white;
+    font-family: Gotham-Normal;
+    font-size: 14px;
+    margin: 60px 30px 0 30px;
+}
+
+.footer-list a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    transition-duration: 0.5s;
+}
+
+.footer-list a:hover{
+    color: white;
+    transition-duration: 0.5s;
+}
+.footer-list span{
+    display: block;
+    font-family: Gotham-Medium !important;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-list li {
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+
+.social-container{
+    display: flex;
+    width: 160px;
+    height: 40px;
+    margin: 60px 30px 0 auto;
+}
+
+.social-media-div{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #282828;
+    border-radius: 50%;
+    margin-right: 18px;
+    transition-duration: 0.5s;
+}
+
+.social-media-div:hover{
+    background-color: #555;
+    transition-duration: 0.5s;
+}
+
+.social-media-logo{
+    margin: auto;
+    width: 18px;
+    height: 18px;
+}
+
+.footer-line{
+    position:absolute;
+    top: 1700px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 1125px;
+    height: 0.5px;
+    margin: 50px auto 25px 30px;
+}
+
+.end-line{
+    position: absolute;
+    top: 1780px;
+    width: 1125px;
+    height: 16px;
+    color: white;
+    font-family: Gotham-Normal;
+    margin: 0 0 0 30px;
+}
+
+
+.end-line a {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Gotham-Normal;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 0 10px 0 0;
+    transition-duration: 0.5s;
+}
+
+.end-line a:hover{
+    color: white;
+    transition-duration: 0.5s;
+}
+
+.end-line span{
+    position: relative;
+    left: 500px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Gotham-Normal;
+    font-size: 14px;
+}
